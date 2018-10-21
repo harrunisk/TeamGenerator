@@ -46,8 +46,8 @@ const reducer = (state = initialState, action) => {
     case GIVE_RANDOM_TEAM:
       return {
         ...state,
-        firstTeam: state.firstTeam,
-        secondTeam: state.secondTeam,
+        firstTeam: leagues[Math.floor(Math.random() * leagues.length)].toString(),
+        secondTeam: leagues[Math.floor(Math.random() * leagues.length)].toString(),
       };
     case CHANGE_CURRENCY_AMOUNT:
       return {

@@ -82,8 +82,8 @@ class Home extends Component {
       quoteCurrency,
       primaryColor,
       logoPlace,
-      // firstTeam,
-      // secondTeam,
+      firstTeam,
+      secondTeam,
     } = this.props;
     let quotePrice = (amount * conversionRate).toFixed(2);
 
@@ -152,8 +152,8 @@ const mapStateToProps = (state) => {
     primaryColor: state.theme.primaryColor,
     currencyError: state.currencies.error,
     logoPlace: state.theme.logoPlace,
-    firstTeam: state.theme.firstTeam,
-    secondTeam: state.theme.secondTeam,
+    firstTeam: state.currencies.firstTeam,
+    secondTeam: state.currencies.secondTeam,
   };
 };
 export default connect(mapStateToProps)(connectAlert(Home));
