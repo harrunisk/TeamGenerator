@@ -1,0 +1,16 @@
+export default [
+  'Aalborg BK',
+  'Aarhus GF',
+  'AC Horsens',
+  'Brøndby IF',
+  'Esbjerg fB',
+  'FC København',
+  'FC Midtjylland',
+  'FC Nordsjælland',
+  'Hobro IK',
+  'Odense BK',
+  'Randers FC',
+  'SønderjyskE',
+  'Vejle Boldklub',
+  'Vendsyssel FF',
+];

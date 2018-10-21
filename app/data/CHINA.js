@@ -1,0 +1,18 @@
+export default [
+  'Beijing Guoan',
+  'Beijing Renhe',
+  'Changchun Yatai',
+  'Chongqing SWM',
+  'Dalian Yifang',
+  'Guangzhou',
+  'Guangzhou R&F',
+  'Guizhou Hengfeng',
+  'Hebei CFFC',
+  'Henan Jianye',
+  'Jiangsu Suning',
+  'Shandong Luneng',
+  'Shanghai Shenhua',
+  'Shanghai SIPG',
+  'Tianjin Quanjian',
+  'Tianjin TEDA',
+];

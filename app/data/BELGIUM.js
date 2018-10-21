@@ -1,0 +1,18 @@
+export default [
+  'Cercle Brugge',
+  'Club Brugge',
+  'Excel Mouscron',
+  'KAA Gent',
+  'KAS Eupen',
+  'KRC Genk',
+  'KV Kortrijk',
+  'KV Oostende',
+  'Royal Antwerp FC',
+  'RSC Anderlecht',
+  'Sint-Truiden',
+  'Sp. Charleroi',
+  'Sport. Lokeren',
+  'Standard Liège',
+  'Waasl. Beveren',
+  'Zulte-Waregem',
+];

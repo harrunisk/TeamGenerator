@@ -1,0 +1,18 @@
+export default [
+  'Audax Italiano',
+  'CD Antofagasta',
+  'CD Huachipato',
+  'CD O’Higgins',
+  'CD Palestino',
+  'CD Viñazur',
+  'Curicó Unido',
+  'Depor. Iquique',
+  'Deportes Temuco',
+  'Everton de Viña',
+  'San Luis',
+  'San Luis',
+  'Uni. Concepción',
+  'Uni. de Chile',
+  'Unión Española',
+  'Unión La Calera',
+];

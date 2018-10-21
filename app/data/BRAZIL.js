@@ -1,0 +1,17 @@
+export default [
+  'América',
+  'Atl. Paranaense',
+  'Atlético Mineiro',
+  'Bahia',
+  'Botafogo',
+  'Ceará SC',
+  'Chapecoense',
+  'Cruzeiro',
+  'Fluminense',
+  'Grêmio',
+  'Internacional',
+  'Paraná',
+  'Santos',
+  'Sport',
+  'Vitória',
+];
