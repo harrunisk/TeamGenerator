@@ -1,0 +1,16 @@
+export default [
+  'Australia',
+  'Brazil',
+  'Canada',
+  'England',
+  'France',
+  'Germany',
+  'Italy',
+  'Mexico',
+  'Netherlands',
+  'New Zealand',
+  'Norway',
+  'Spain',
+  'Sweden',
+  'United States',
+];

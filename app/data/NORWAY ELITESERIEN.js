@@ -1,0 +1,18 @@
+export default [
+  'FK Bodø/Glimt',
+  'FK Haugesund',
+  'IK Start',
+  'Kristiansund',
+  'Lillestrøm SK',
+  'Molde FK',
+  'Odds BK',
+  'Ranheim Fotball',
+  'Rosenborg BK',
+  'Sandefjord',
+  'Sarpsborg 08 FF',
+  'SK Brann',
+  'Stabæk Fotball',
+  'Strømsgodset IF',
+  'Tromsø IL',
+  'Vålerenga Fotball',
+];

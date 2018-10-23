@@ -1,0 +1,18 @@
+export default [
+  'AIK',
+  'BK Häcken',
+  'Brommapojkarna',
+  'Dalkurd FF',
+  'Djurgårdens IF',
+  'GIF Sundsvall',
+  'Hammarby IF',
+  'IF Elfsborg',
+  'IFK Göteborg',
+  'IFK Norrköping',
+  'IK Sirius',
+  'Kalmar FF',
+  'Malmö FF',
+  'Örebro SK',
+  'Östersunds FK',
+  'Trelleborgs FF',
+];

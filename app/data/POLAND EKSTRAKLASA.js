@@ -1,0 +1,18 @@
+export default [
+  'Arka Gdynia',
+  'Cracovia',
+  'Górnik Zabrze',
+  'Jagiellonia',
+  'Korona Kielce',
+  'Lech Poznań',
+  'Lechia Gdańsk',
+  'Legia Warszawa',
+  'Miedź Legnica',
+  'Piast Gliwice',
+  'Pogoń Szczecin',
+  'Śląsk Wrocław',
+  'Wisła Kraków',
+  'Wisła Płock',
+  'Z. Sosnowiec',
+  'Zagłębie Lubin',
+];

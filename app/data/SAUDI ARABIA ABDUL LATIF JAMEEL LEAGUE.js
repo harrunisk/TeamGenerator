@@ -1,0 +1,18 @@
+export default [
+  'Al Ahli',
+  'Al Batin',
+  'Al Faisaly',
+  'Al Fateh',
+  'Al Fayha',
+  'Al Hazem',
+  'Al Hilal',
+  'Al Ittihad',
+  'Al Nassr',
+  'Al Qadisiyah',
+  'Al Raed',
+  'Al Shabab',
+  'Al Wehda',
+  'Al Taawoun',
+  'Ettifaq FC',
+  'Ohod Club',
+];
