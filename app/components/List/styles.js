@@ -29,8 +29,6 @@ const styles = EStyleSheet.create({
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 0,
-    paddingRight: 0,
   },
   iconVisible: {
     backgroundColor: '$primaryBlue',

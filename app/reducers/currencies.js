@@ -19,6 +19,8 @@ const initialState = {
   amount: 100,
   conversions: {},
   error: null,
+  primaryColor: '#4F6D7A',
+  logoPlace: 'Down',
 };
 
 

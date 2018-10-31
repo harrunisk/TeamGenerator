@@ -149,9 +149,9 @@ const mapStateToProps = (state) => {
     conversionRate: rates[quoteCurrency] || 0,
     isFetching: conversionSelector.isFetching,
     lastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
-    primaryColor: state.theme.primaryColor,
+    primaryColor: state.currencies.primaryColor,
     currencyError: state.currencies.error,
-    logoPlace: state.theme.logoPlace,
+    logoPlace: state.currencies.logoPlace,
     firstTeam: state.currencies.firstTeam,
     secondTeam: state.currencies.secondTeam,
   };

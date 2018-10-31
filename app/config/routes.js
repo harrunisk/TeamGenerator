@@ -3,9 +3,7 @@ import { StatusBar } from 'react-native';
 
 import Home from '../screens/Home';
 import CurrencyList from '../screens/CurrencyList';
-import Options from '../screens/Options';
-import Themes from '../screens/Themes';
-import Contact from '../screens/Contact';
+
 
 const HomeStack = StackNavigator({
   Home: {
@@ -14,26 +12,6 @@ const HomeStack = StackNavigator({
       header: () => null,
     },
   },
-  Options: {
-    screen: Options,
-    navigationOptions: {
-      headerTitle: 'Options',
-    },
-  },
-  Themes: {
-    screen: Themes,
-    navigationOptions: {
-      headerTitle: 'Themes',
-    },
-  },
-  Contact: {
-    screen: Contact,
-    navigationOptions: {
-      headerTitle: 'Contact',
-    },
-  },
-
-
 }, {
   // for smoothing
   headerMode: 'screen',

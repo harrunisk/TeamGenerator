@@ -61,7 +61,7 @@ class CurrencyList extends Component {
 const mapStateToProps = state => ({
   baseCurrency: state.currencies.baseCurrency,
   quoteCurrency: state.currencies.quoteCurrency,
-  primaryColor: state.theme.primaryColor,
+  primaryColor: state.currencies.primaryColor,
 });
 // dispatch kullanabilmek için oradan gelecek değerleri connect ile bağlamak gerekiyor
 export default connect(mapStateToProps)(CurrencyList);
