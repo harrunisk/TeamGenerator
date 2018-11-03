@@ -2,7 +2,7 @@ import { StackNavigator } from 'react-navigation';
 import { StatusBar } from 'react-native';
 
 import Home from '../screens/Home';
-import CurrencyList from '../screens/CurrencyList';
+import LeagueList from '../screens/LeagueList';
 
 
 const HomeStack = StackNavigator({
@@ -17,9 +17,9 @@ const HomeStack = StackNavigator({
   headerMode: 'screen',
 });
 
-const CurrencyListStack = StackNavigator({
-  CurrencyList: {
-    screen: CurrencyList,
+const LeagueListStack = StackNavigator({
+  LeagueList: {
+    screen: LeagueList,
     navigationOptions: ({ navigation }) => ({
       headerTitle: navigation.state.params.title,
     }),
@@ -31,8 +31,8 @@ export default StackNavigator({
   Home: {
     screen: HomeStack,
   },
-  CurrencyList: {
-    screen: CurrencyListStack,
+  LeagueList: {
+    screen: LeagueListStack,
   },
 },
 {

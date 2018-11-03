@@ -26,8 +26,6 @@ class Home extends Component {
       alertWithType: PropTypes.func,
       currencyError: PropTypes.string,
       logoPlace: PropTypes.string,
-      firstTeam: PropTypes.string,
-      secondTeam: PropTypes.string,
     };
 
     componentWillMount() {
@@ -44,14 +42,14 @@ class Home extends Component {
 
   handlePressBaseCurrency = () => {
     const { navigation } = this.props;
-    //  Buraya tıklandığında CurrencyList'e yönlendirme yapacak.
+    //  Buraya tıklandığında LeagueList'e yönlendirme yapacak.
     //  aşagıdaki kod
-    navigation.navigate('CurrencyList', { title: 'Leagues', type: 'base' });
+    navigation.navigate('LeagueList', { title: 'Leagues', type: 'base' });
   }
 
   handlePressQuoteCurrency = () => {
     const { navigation } = this.props;
-    navigation.navigate('CurrencyList', { title: 'Leagues', type: 'quote' });
+    navigation.navigate('LeagueList', { title: 'Leagues', type: 'quote' });
   }
 
   handleTextChange = (text) => {

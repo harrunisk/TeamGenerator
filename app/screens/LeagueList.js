@@ -9,7 +9,7 @@ import leagues from '../data/leagues';
 import { changeBaseCurrency, changeQuoteCurrency } from '../actions/currencies';
 
 
-class CurrencyList extends Component {
+class LeagueList extends Component {
   static propTypes = {
     navigation: PropTypes.object,
     dispatch: PropTypes.func,
@@ -64,4 +64,4 @@ const mapStateToProps = state => ({
   primaryColor: state.currencies.primaryColor,
 });
 // dispatch kullanabilmek için oradan gelecek değerleri connect ile bağlamak gerekiyor
-export default connect(mapStateToProps)(CurrencyList);
+export default connect(mapStateToProps)(LeagueList);
