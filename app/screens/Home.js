@@ -9,7 +9,7 @@ import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Buttons';
 import { connectAlert } from '../components/Alert';
 import {
-  swapCurrency, changeCurrencyAmount, getInitialConversion, giveRandomTeam,
+  changeCurrencyAmount, getInitialConversion, giveRandomTeam,
 } from '../actions/currencies';
 
 
@@ -82,8 +82,6 @@ class Home extends Component {
       quoteCurrency,
       primaryColor,
       logoPlace,
-      firstTeam,
-      secondTeam,
     } = this.props;
     let quotePrice = (amount * conversionRate).toFixed(2);
 
@@ -152,8 +150,6 @@ const mapStateToProps = (state) => {
     primaryColor: state.currencies.primaryColor,
     currencyError: state.currencies.error,
     logoPlace: state.currencies.logoPlace,
-    firstTeam: state.currencies.firstTeam,
-    secondTeam: state.currencies.secondTeam,
   };
 };
 export default connect(mapStateToProps)(connectAlert(Home));
