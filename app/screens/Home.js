@@ -28,6 +28,7 @@ class Home extends Component {
       logoPlace: PropTypes.string,
     };
 
+
     componentWillMount() {
       const { dispatch } = this.props;
       dispatch(getInitialConversion());
@@ -114,12 +115,6 @@ class Home extends Component {
           value={quotePrice}
           textColor={primaryColor}
         />
-        {/* <LastConverted
-            base={baseCurrency}
-            quote={quoteCurrency}
-            date={lastConvertedDate}
-            conversionRate={conversionRate.toString()}
-          /> */}
         <Logo
           tintColor={primaryColor}
           logoPlace={logoPlace}

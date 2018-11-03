@@ -53,9 +53,9 @@ const Logo = (props) => {
     teamNameText,
   } = props;
 
-  const logoTextStyles = [styles.text];
-  if (logoPlace === 'down') {
-    logoTextStyles.push({ marginTop: 40 });
+  let logoTextStyles = [styles.text];
+  if (logoPlace === 'Down') {
+    logoTextStyles = [styles.textBelow];
   }
   let textText = teamNameText;
   let Randomleague;

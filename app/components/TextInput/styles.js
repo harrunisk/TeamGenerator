@@ -27,6 +27,8 @@ export default EStyleSheet.create({
     backgroundColor: '$white',
     borderTopLeftRadius: BORDER_RADIUS,
     borderBottomLeftRadius: BORDER_RADIUS,
+    borderTopRightRadius: BORDER_RADIUS,
+    borderBottomRightRadius: BORDER_RADIUS,
   },
   buttonText: {
     fontWeight: '600',
@@ -43,7 +45,7 @@ export default EStyleSheet.create({
     color: '$inputText',
   },
   border: {
-    height: INPUT_HEIGHT,
+    height: 0,
     width: StyleSheet.hairlineWidth,
     backgroundColor: '$border',
 

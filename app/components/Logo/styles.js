@@ -4,7 +4,6 @@ export default EStyleSheet.create({
 
   container: {
     alignItems: 'center',
-    marginTop: 50,
     width: '80%',
 
   },
@@ -12,7 +11,15 @@ export default EStyleSheet.create({
     fontWeight: '600',
     fontSize: 35,
     letterSpacing: -0.5,
-    marginBottom: 40,
+    marginBottom: '4%',
+    color: '$white',
+    textAlign: 'center',
+  },
+  textBelow: {
+    fontWeight: '600',
+    fontSize: 35,
+    letterSpacing: -0.5,
+    marginTop: '4%',
     color: '$white',
     textAlign: 'center',
   },
