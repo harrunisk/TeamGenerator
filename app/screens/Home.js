@@ -8,6 +8,7 @@ import { Logo } from '../components/Logo';
 import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Buttons';
 import { connectAlert } from '../components/Alert';
+import { SwipeModal } from '../components/ScrollableSwipeableModal';
 import {
   changeCurrencyAmount, getInitialConversion, giveRandomTeam,
 } from '../actions/currencies';
@@ -120,7 +121,7 @@ class Home extends Component {
           logoPlace={logoPlace}
           teamNameText={quoteCurrency}
         />
-
+        <SwipeModal />
       </Container>
     );
   }
