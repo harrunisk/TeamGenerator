@@ -9,7 +9,7 @@ import styles from './styles';
 const Header = ({ onPress }) => (
   <View style={styles.container}>
     <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Image resizeMode="contain" style={styles.icon} source={require('./images/gear.png')} />
+      <Image resizeMode="contain" style={styles.icon} source={require('./images/add36.png')} />
     </TouchableOpacity>
   </View>
 );

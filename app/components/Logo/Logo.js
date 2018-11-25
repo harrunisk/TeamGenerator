@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  View, Text,
+  View, Text, Alert,
 } from 'react-native';
 import styles from './styles';
 import LEAGUES from '../../data/leagues';
@@ -46,6 +46,9 @@ import TURKEY from '../../data/TURKEY SUPER LIG';
 import UEFA_CHAMPIONS_LEAGUE from '../../data/UEFA Champions League';
 import UEFA_EUROPA_LEAGUE from '../../data/UEFA Europa League';
 import USA from '../../data/USA CANADA MAJOR LEAGUE SOCCER';
+import List1 from '../../data/list1';
+import List2 from '../../data/list2';
+
 
 const Logo = (props) => {
   const {
@@ -149,6 +152,22 @@ const Logo = (props) => {
     textText = TURKEY[Math.floor(Math.random() * TURKEY.length)].toString();
   } else if (league === 'USA / CANADA') {
     textText = USA[Math.floor(Math.random() * USA.length)].toString();
+  } else if (league === 'My Teams 1') {
+    if (List1.length === 0 || List1 === '' || List1 == null) {
+      Alert.alert("Here's a message", 'Team list 1 is empty! Add your team.', [
+        { text: 'OK', onPress: () => {} },
+      ]);
+    } else {
+      textText = List1[Math.floor(Math.random() * List1.length)].toString();
+    }
+  } else if (league === 'My Teams 2') {
+    if (List2.length === 0 || List2 === '' || List2 == null) {
+      Alert.alert("Here's a message", 'Team list 1 is empty! Add your team.', [
+        { text: 'OK', onPress: () => {} },
+      ]);
+    } else {
+      textText = List2[Math.floor(Math.random() * List2.length)].toString();
+    }
   }
 
 

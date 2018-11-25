@@ -1,5 +1,7 @@
 export default [
   'All',
+  'My Teams 1',
+  'My Teams 2',
   'UEFA Champions League',
   'UEFA Europa League',
   'ARGENTINA',

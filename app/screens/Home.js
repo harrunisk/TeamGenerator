@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 // import { KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
+import { StatusBar, KeyboardAvoidingView } from 'react-native';
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
+import { Header } from '../components/Header';
+
 import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Buttons';
 import { connectAlert } from '../components/Alert';
@@ -69,6 +72,7 @@ class Home extends Component {
   }
 
   handleOptionPress = () => {
+    this.props.openModal;
     const { navigation } = this.props;
     navigation.navigate('Options');
   }
@@ -91,8 +95,8 @@ class Home extends Component {
 
     return (
       <Container backgroundColor={primaryColor}>
-        {/* <StatusBar translucent={false} barStyle="light-content" />
-        <Header onPress={this.handleOptionPress} /> */}
+        <StatusBar translucent={false} barStyle="light-content" />
+        {/* <Header onPress={this.handleOptionPress} /> */}
         <Logo
           tintColor={primaryColor}
           teamNameText={baseCurrency}

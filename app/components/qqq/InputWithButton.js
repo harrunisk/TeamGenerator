@@ -30,6 +30,13 @@ const InputWithButton = ({
 
   return (
     <View style={containerStyles}>
+      <TextInput
+        style={styles.input}
+        maxLength={20}
+        underlineColorAndroid="transparent"
+        {...props}
+      />
+      <View style={styles.separator} />
       <TouchableHighlight
         onPress={onPress}
         style={styles.buttonContainer}
@@ -37,8 +44,6 @@ const InputWithButton = ({
       >
         <Text style={buttonTextStyles}>{buttonText}</Text>
       </TouchableHighlight>
-      <View style={styles.separator} />
-      <TextInput style={styles.input} underlineColorAndroid="transparent" {...props} />
     </View>
   );
 };

@@ -8,7 +8,7 @@ export default EStyleSheet.create({
   $buttonBackgroundColorBase: '$white',
   $buttonBackgroundColorModifier: 0.1,
   container: {
-    backgroundColor: '#91627b',
+    backgroundColor: '#4F6D7A',
     width: '80%',
     height: INPUT_HEIGHT,
     flexDirection: 'row',
@@ -23,7 +23,7 @@ export default EStyleSheet.create({
     height: INPUT_HEIGHT,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#91627b',
+    backgroundColor: '#4F6D7A',
     borderTopLeftRadius: BORDER_RADIUS,
     borderBottomLeftRadius: BORDER_RADIUS,
   },
@@ -31,7 +31,7 @@ export default EStyleSheet.create({
     fontWeight: '600',
     fontSize: 20,
     paddingHorizontal: 16,
-    color: '$primaryBlue',
+    color: '#fff',
   },
   separator: {
     height: INPUT_HEIGHT,
@@ -43,7 +43,7 @@ export default EStyleSheet.create({
     height: INPUT_HEIGHT,
     borderTopRightRadius: BORDER_RADIUS,
     paddingHorizontal: 8,
-    color: '$inputText',
+    color: '#fff',
     fontSize: 18,
   },
 });
