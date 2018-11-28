@@ -30,6 +30,7 @@ class Home extends Component {
       alertWithType: PropTypes.func,
       currencyError: PropTypes.string,
       logoPlace: PropTypes.string,
+      animationType: PropTypes.string,
     };
 
 
@@ -86,6 +87,7 @@ class Home extends Component {
       quoteCurrency,
       primaryColor,
       logoPlace,
+      animationType,
     } = this.props;
     let quotePrice = (amount * conversionRate).toFixed(2);
 
@@ -100,6 +102,7 @@ class Home extends Component {
         <Logo
           tintColor={primaryColor}
           teamNameText={baseCurrency}
+          animationType={animationType}
         />
         <InputWithButton
           buttonText={baseCurrency}
@@ -124,6 +127,7 @@ class Home extends Component {
           tintColor={primaryColor}
           logoPlace={logoPlace}
           teamNameText={quoteCurrency}
+          animationType={animationType}
         />
         <SwipeModal />
       </Container>
@@ -148,6 +152,7 @@ const mapStateToProps = (state) => {
     primaryColor: state.currencies.primaryColor,
     currencyError: state.currencies.error,
     logoPlace: state.currencies.logoPlace,
+    animationType: state.currencies.animationType,
   };
 };
 export default connect(mapStateToProps)(connectAlert(Home));

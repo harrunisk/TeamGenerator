@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import {
   View, Text, Alert,
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import styles from './styles';
 import LEAGUES from '../../data/leagues';
+import LEAGUES2 from '../../data/leagues.1';
 import ARGENTINA from '../../data/ARGENTINA';
 import AUSTRALIA from '../../data/AUSTRALIA';
 import AUSTRIA from '../../data/AUSTRIA';
@@ -54,6 +56,7 @@ const Logo = (props) => {
   const {
     logoPlace,
     teamNameText,
+    animationType,
   } = props;
 
   let logoTextStyles = [styles.text];
@@ -63,14 +66,15 @@ const Logo = (props) => {
   let textText = teamNameText;
   let Randomleague;
   let league;
+  const animation = animationType;
   if (teamNameText === 'All') {
-    Randomleague = LEAGUES[Math.floor(Math.random() * LEAGUES.length)].toString();
+    Randomleague = LEAGUES2[Math.floor(Math.random() * LEAGUES2.length)].toString();
     league = Randomleague;
   } else {
     league = teamNameText;
   }
 
-  if (teamNameText === 'UEFA Champions League') {
+  if (league === 'UEFA Champions League') {
     textText = UEFA_CHAMPIONS_LEAGUE[Math.floor(Math.random() * UEFA_CHAMPIONS_LEAGUE.length)].toString();
   } else if (league === 'UEFA Europa League') {
     textText = UEFA_EUROPA_LEAGUE[Math.floor(Math.random() * UEFA_EUROPA_LEAGUE.length)].toString();
@@ -162,7 +166,7 @@ const Logo = (props) => {
     }
   } else if (league === 'My Teams 2') {
     if (List2.length === 0 || List2 === '' || List2 == null) {
-      Alert.alert("Here's a message", 'Team list 1 is empty! Add your team.', [
+      Alert.alert("Here's a message", 'Team list 2 is empty! Add your team.', [
         { text: 'OK', onPress: () => {} },
       ]);
     } else {
@@ -172,14 +176,15 @@ const Logo = (props) => {
 
 
   return (
-    <View style={styles.container}>
+    <Animatable.View animation={animation}>
       <Text style={logoTextStyles}>
         {textText}
       </Text>
-    </View>
+    </Animatable.View>
   );
 };
 Logo.propTypes = {
+  animationType: PropTypes.string,
   logoPlace: PropTypes.string,
   teamNameText: PropTypes.string,
 };

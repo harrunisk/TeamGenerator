@@ -21,6 +21,7 @@ const initialState = {
   error: null,
   primaryColor: '#4F6D7A',
   logoPlace: 'Down',
+  animationType: 'bounceInDown',
 };
 
 
@@ -40,6 +41,25 @@ const setConversions = (state, action) => {
   };
 };
 
+const createAnimationType = (state, action) => {
+  let type;
+  console.log(state.animationType);
+  console.log(action.animationType);
+
+  if (state.animationType === 'bounceInDown') {
+    type = 'bounceInUp';
+  } else if (state.animationType === 'bounceInUp') {
+    type = 'bounceIn';
+  } else if (state.animationType === 'bounceIn') {
+    type = 'bounceInLeft';
+  } else if (state.animationType === 'bounceInLeft') {
+    type = 'bounceInRight';
+  } else if (state.animationType === 'bounceInRight') {
+    type = 'bounceInDown';
+  }
+  return type;
+};
+
 
 // we are not modifying input we are creating new brand object
 // in CHANGE_CURRENCY_AMOUNT
@@ -50,6 +70,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         firstTeam: leagues[Math.floor(Math.random() * leagues.length)].toString(),
         secondTeam: leagues[Math.floor(Math.random() * leagues.length)].toString(),
+        animationType: createAnimationType(state, action),
       };
     case CHANGE_CURRENCY_AMOUNT:
       return {

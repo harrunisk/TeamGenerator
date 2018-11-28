@@ -1,5 +1,8 @@
 {
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 9272
+  "packagerPid": 16965,
+  "expoServerNgrokUrl": "https://3x-6j6.harrunisk.teampicker.exp.direct",
+  "packagerNgrokUrl": "https://packager.3x-6j6.harrunisk.teampicker.exp.direct",
+  "ngrokPid": 17025
 }

@@ -89,7 +89,7 @@ class SwipeModal extends Component {
 
   handlePress2 = () => {
     if (this.state.teamName === '' || this.state.teamName == null) {
-      Alert.alert("Here's a message", "Team name can't be empty", [
+      Alert.alert("Here's a message", "Team name can't be empty!", [
         { text: 'OK', onPress: () => {} },
       ]);
     } else {
