@@ -10,6 +10,13 @@
     },
     "android": {
       "package": "com.temagenerator.randomteam"
+    },
+    "splash": {
+      "image": "./app/data/9.png",
+      "resizeMode": "cover"
+
+
+
     }
   }
 }

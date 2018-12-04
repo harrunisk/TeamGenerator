@@ -16,10 +16,6 @@ export const giveRandomTeam = team => ({
 export const swapCurrency = () => ({
   type: SWAP_CURRENCY,
 });
-export const changeCurrencyAmount = amount => ({
-  type: CHANGE_CURRENCY_AMOUNT,
-  amount: parseFloat(amount),
-});
 
 export const changeBaseCurrency = currency => ({
   type: CHANGE_BASE_CURRENCY,

@@ -3,19 +3,26 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 // import { KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
-import { StatusBar, KeyboardAvoidingView } from 'react-native';
-import { Container } from '../components/Container';
+import { StatusBar, ImageBackground } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import { Logo } from '../components/Logo';
-import { Header } from '../components/Header';
-
 import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Buttons';
 import { connectAlert } from '../components/Alert';
 import { SwipeModal } from '../components/ScrollableSwipeableModal';
 import {
-  changeCurrencyAmount, getInitialConversion, giveRandomTeam,
+  getInitialConversion, giveRandomTeam,
 } from '../actions/currencies';
 
+
+const styles = EStyleSheet.create({
+  container: {
+    ...EStyleSheet.absoluteFillObject,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 class Home extends Component {
     static propTypes = {
@@ -23,9 +30,6 @@ class Home extends Component {
       dispatch: PropTypes.func,
       baseCurrency: PropTypes.string,
       quoteCurrency: PropTypes.string,
-      amount: PropTypes.number,
-      conversionRate: PropTypes.number,
-      isFetching: PropTypes.bool,
       primaryColor: PropTypes.string,
       alertWithType: PropTypes.func,
       currencyError: PropTypes.string,
@@ -58,11 +62,6 @@ class Home extends Component {
     navigation.navigate('LeagueList', { title: 'Leagues', type: 'quote' });
   }
 
-  handleTextChange = (text) => {
-    const { dispatch } = this.props;
-    // to-do this.props.dispatch kullanarak yapmam gerekiyor
-    dispatch(changeCurrencyAmount(text));
-  }
 
   handleSwapCurrency = () => {
     const { dispatch } = this.props;
@@ -74,29 +73,25 @@ class Home extends Component {
 
   handleOptionPress = () => {
     this.props.openModal;
-    const { navigation } = this.props;
-    navigation.navigate('Options');
   }
 
   render() {
     const {
-      isFetching,
-      amount,
-      conversionRate,
       baseCurrency,
       quoteCurrency,
       primaryColor,
       logoPlace,
       animationType,
     } = this.props;
-    let quotePrice = (amount * conversionRate).toFixed(2);
 
-    if (isFetching) {
-      quotePrice = '...';
-    }
 
     return (
-      <Container backgroundColor={primaryColor}>
+      <ImageBackground
+        style={styles.container}
+        source={require('../data/9blur.png')}
+        imageStyle={{ resizeMode: 'cover' }}
+
+      >
         <StatusBar translucent={false} barStyle="light-content" />
         {/* <Header onPress={this.handleOptionPress} /> */}
         <Logo
@@ -107,7 +102,6 @@ class Home extends Component {
         <InputWithButton
           buttonText={baseCurrency}
           onPress={this.handlePressBaseCurrency}
-          defaultValue={amount.toString()}
           editable={false}
           onChangeText={this.handleTextChange}
           textColor={primaryColor}
@@ -120,7 +114,6 @@ class Home extends Component {
           buttonText={quoteCurrency}
           onPress={this.handlePressQuoteCurrency}
           editable={false}
-          value={quotePrice}
           textColor={primaryColor}
         />
         <Logo
@@ -130,7 +123,7 @@ class Home extends Component {
           animationType={animationType}
         />
         <SwipeModal />
-      </Container>
+      </ImageBackground>
     );
   }
 }
@@ -139,16 +132,10 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   const { baseCurrency, quoteCurrency } = state.currencies;
   // ilkine ulaş yoksa boş obje döndür
-  const conversionSelector = state.currencies.conversions[baseCurrency] || {};
-  const rates = conversionSelector.rates || {};
 
   return {
     baseCurrency,
     quoteCurrency,
-    amount: state.currencies.amount,
-    conversionRate: rates[quoteCurrency] || 0,
-    isFetching: conversionSelector.isFetching,
-    lastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
     primaryColor: state.currencies.primaryColor,
     currencyError: state.currencies.error,
     logoPlace: state.currencies.logoPlace,

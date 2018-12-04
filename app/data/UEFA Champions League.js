@@ -13,7 +13,7 @@ export default [
   'Hoffenheim',
   'Internazionale',
   'Juventus',
-  'Liverpol',
+  'Liverpool',
   'Lokomotiv Moskva',
   'Lyon',
   'Man. City',
