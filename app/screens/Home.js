@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 // import { KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
-import { StatusBar, ImageBackground } from 'react-native';
+import { StatusBar, ImageBackground, Platform } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import { Logo } from '../components/Logo';
 import { InputWithButton } from '../components/TextInput';
@@ -17,10 +17,16 @@ import {
 
 const styles = EStyleSheet.create({
   container: {
-    ...EStyleSheet.absoluteFillObject,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 0,
+    top: 0,
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+
   },
 });
 
@@ -91,8 +97,17 @@ class Home extends Component {
         source={require('../data/9blur.png')}
         imageStyle={{ resizeMode: 'cover' }}
 
+
       >
-        <StatusBar translucent={false} barStyle="light-content" />
+        {Platform.OS === 'android' && (
+        <StatusBar
+          barStyle="dark-content"
+          animated
+          translucent
+        />
+        )}
+
+
         {/* <Header onPress={this.handleOptionPress} /> */}
         <Logo
           tintColor={primaryColor}

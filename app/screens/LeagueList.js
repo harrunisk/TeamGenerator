@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {
-  FlatList, StatusBar, View,
+  FlatList, StatusBar, View, Platform,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { ListItem, Separator } from '../components/List';
@@ -40,7 +40,13 @@ class LeagueList extends Component {
     }
     return (
       <View style={{ flex: 1 }}>
-        <StatusBar translucent={false} barStyle="default" />
+        {Platform.OS === 'android' && (
+        <StatusBar
+          barStyle="dark-content"
+          animated
+          translucent
+        />
+        )}
         <FlatList
           data={leagues}
           renderItem={({ item }) => (

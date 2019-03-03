@@ -1,22 +1,21 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0",
+    "sdkVersion": "32.0.0",
     "name": "Football Team Generator",
-    "version": "1.0.0",
-    "slug": "FifaPesRandomTeam",
+    "version": "1.0.4",
+    "slug": "FootballTeamGenerator",
     "icon": "./app/data/logo.png",
     "ios": {
       "bundleIdentifier": "com.temagenerator.randomteam"
     },
     "android": {
-      "package": "com.temagenerator.randomteam"
+      "package": "com.temagenerator.randomteam",
+      "versionCode": 5,
+      "permissions": []
     },
     "splash": {
       "image": "./app/data/9.png",
       "resizeMode": "cover"
-
-
-
     }
   }
 }
