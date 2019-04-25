@@ -1,8 +1,8 @@
 {
   "expo": {
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "27.0.0",
     "name": "Football Team Generator",
-    "version": "1.0.4",
+    "version": "1.0.7",
     "slug": "FootballTeamGenerator",
     "icon": "./app/data/logo.png",
     "ios": {
@@ -10,7 +10,7 @@
     },
     "android": {
       "package": "com.temagenerator.randomteam",
-      "versionCode": 5,
+      "versionCode": 7,
       "permissions": []
     },
     "splash": {
